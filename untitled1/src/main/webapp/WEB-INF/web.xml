@@ -11,9 +11,11 @@
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath:springmvc.xml</param-value>
     </init-param>
+    <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>DispatcherServlet</servlet-name>
     <url-pattern>/</url-pattern>
+<!--    除了.jsp结尾的路径都通过DispatcherServlet-->
   </servlet-mapping>
 </web-app>
