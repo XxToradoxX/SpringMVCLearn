@@ -19,11 +19,11 @@ public class TestController {
         return "hello";
     }
     @RequestMapping("/ttst2")
-//    @ResponseBody
-    public Demo ttst2(){
-
-//        String str = "{'age':'18','name':'ll'}";
-        return new Demo("lhh",18);
-//        return str;
+    public Demo ttst2(Demo demo){
+        return demo;
+    }
+    @RequestMapping("/ttst3")
+    public String ttst3(){
+        return "'name'='zhangsan','age'=18";
     }
 }
