@@ -11,7 +11,7 @@
     <!--相应的 .do 请求就会被 Controller 处理 因此这个配置至关重要-->
     <!--当请求没有匹配到处理类（其中包括没有配置 <mvc:annotation-driven> 或者 访问的是静态资源文件）时-->
     <!--就会去找 <mvc:default-servlet-handler> （处理静态资源文件）配置的 DefaultServletHttpRequestHandler 默认处理器处理了-->
-    <mvc:default-servlet-handler/>
+<!--    <mvc:default-servlet-handler/>-->
     <!--    将静态资源(html jpg css js)还是由default-servlet处理(Tomcat config中的servlet)-->
     <!--    不然DispatcherServlet的路径也是/(全路径)而DispatcherServlet没有处理静态资源能力-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
