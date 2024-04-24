@@ -15,7 +15,7 @@ import java.util.Map;
 
 @RestController
 public class TestController {
-    @RequestMapping("/hello")
+    @RequestMapping("/ttst")
     public String ttst1(){
         return "hello";
     }
