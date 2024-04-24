@@ -25,6 +25,6 @@ public class TestController {
     }
     @RequestMapping("/ttst3")
     public String ttst3(){
-        return "'name'='zhangsan','age'=18";
+        return "{'name'='zhangsan','age'=18}";
     }
 }
