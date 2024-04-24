@@ -3,6 +3,7 @@ package demo.controller;
 import demo.pojo.Demo;
 import netscape.javascript.JSObject;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +20,8 @@ public class TestController {
         return "hello";
     }
     @RequestMapping("/ttst2")
-    public Demo ttst2(Demo demo){
+    public Demo ttst2(){
+        Demo demo = new Demo("ez",18);
         return demo;
     }
     @RequestMapping("/ttst3")
