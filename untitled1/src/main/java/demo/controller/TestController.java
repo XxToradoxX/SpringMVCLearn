@@ -20,8 +20,7 @@ public class TestController {
         return "hello";
     }
     @RequestMapping("/ttst2")
-    public Demo ttst2(){
-        Demo demo = new Demo("ez",18);
+    public Demo ttst2(Demo demo){
         return demo;
     }
     @RequestMapping("/ttst3")
