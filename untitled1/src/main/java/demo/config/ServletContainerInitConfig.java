@@ -1,6 +1,9 @@
 package demo.config;
 
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import javax.servlet.Filter;
 
 public class ServletContainerInitConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
@@ -16,5 +19,12 @@ public class ServletContainerInitConfig extends AbstractAnnotationConfigDispatch
     @Override
     protected String[] getServletMappings() {//获取springmvc拦截路径
         return new String[]{"/"};
+    }
+
+    @Override
+    protected Filter[] getServletFilters() {
+        CharacterEncodingFilter filter = new CharacterEncodingFilter();
+        filter.setEncoding("UTF-8");
+        return new Filter[]{filter};
     }
 }
