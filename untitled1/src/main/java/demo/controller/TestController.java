@@ -32,4 +32,9 @@ public class TestController {
         System.out.println(name.toString());
         return name;
     }
+    @RequestMapping("/ttst6")
+    public Map<?,?> ttst6(@RequestBody Map<String,Object>names){
+        System.out.println(names);
+        return names;
+    }
 }
