@@ -37,4 +37,9 @@ public class TestController {
         System.out.println(names);
         return names;
     }
+    @RequestMapping("/ttst7")
+    public Demo ttst6(@RequestBody Demo demos){
+        System.out.println(demos);
+        return demos;
+    }
 }
