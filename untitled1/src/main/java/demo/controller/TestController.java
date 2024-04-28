@@ -42,4 +42,9 @@ public class TestController {
         System.out.println(demos);
         return demos;
     }
+    @RequestMapping("/ttst8")
+    public List<Demo> ttst6(@RequestBody List<Demo> demos){
+        System.out.println(demos);
+        return demos;
+    }
 }
