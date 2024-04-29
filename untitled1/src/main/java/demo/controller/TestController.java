@@ -1,6 +1,7 @@
 package demo.controller;
 
 import demo.pojo.Demo;
+import demo.pojo.User;
 import netscape.javascript.JSObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -61,8 +62,13 @@ public class TestController {
     }
 
     @RequestMapping("/ttst10/{id}/{ss}")
-    public Demo ttst10(@PathVariable("id") Integer id,@RequestBody Demo demo,@PathVariable("ss")String ss) {
-        System.out.println(id.toString()+" "+ss);
+    public Demo ttst10(@PathVariable("id") Integer id, @RequestBody Demo demo, @PathVariable("ss") String ss) {
+        System.out.println(id.toString() + " " + ss);
         return demo;
+    }
+
+    @RequestMapping("/ttst11")
+    public User ttst11(@RequestBody User user) {
+        return user;
     }
 }
