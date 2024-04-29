@@ -56,7 +56,7 @@ public class TestController {
         return demos;
     }
 
-    @RequestMapping("/ttst9/{id}")
+    @RequestMapping(value = "/ttst9/{id}",method = RequestMethod.GET)
     public String ttst9(@PathVariable("id") Integer id) {
         return id.toString();
     }
