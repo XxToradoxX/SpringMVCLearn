@@ -9,7 +9,7 @@ public class ServletContainerInitConfig extends AbstractAnnotationConfigDispatch
     @Override
 //    获取Spring容器
     protected Class<?>[] getRootConfigClasses() {//获取spring容器配置
-        return new Class[0];
+        return new Class[]{SpringConf.class};
     }
 
     @Override

@@ -1,7 +1,9 @@
 package demo.service;
 
-import org.springframework.stereotype.Service;
+import demo.pojo.Book;
 
-@Service
-public class DemoService {
+import java.util.List;
+
+public interface DemoService {
+    List<Book> selectAll();
 }
