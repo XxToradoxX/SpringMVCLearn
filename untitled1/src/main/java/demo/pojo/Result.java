@@ -11,4 +11,5 @@ public class Result {
     private String msg;
     private String code;
     private Object data;
+
 }
