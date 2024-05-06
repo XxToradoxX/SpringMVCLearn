@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/book")
 public class BookController {
-    @PostMapping("/GetBook")
+    @PostMapping
     public Result GetBook(@RequestBody Book book) {
         System.out.println(book);
         return new Result("200200", "find Success", book);

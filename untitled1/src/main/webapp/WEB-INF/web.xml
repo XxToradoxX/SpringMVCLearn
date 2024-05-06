@@ -4,22 +4,5 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-<!--  <servlet>-->
-<!--    <servlet-name>DispatcherServlet</servlet-name>-->
-<!--    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>-->
-<!--    <init-param>-->
-<!--      <param-name>contextConfigLocation</param-name>-->
-<!--      <param-value>classpath:springmvc.xml</param-value>-->
-<!--    </init-param>-->
-<!--    <load-on-startup>1</load-on-startup>-->
-<!--  </servlet>-->
-<!--  <servlet-mapping>-->
-<!--    <servlet-name>DispatcherServlet</servlet-name>-->
-<!--    <url-pattern>/</url-pattern>-->
-<!--&lt;!&ndash;    除了.jsp结尾的路径都通过DispatcherServlet&ndash;&gt;-->
-<!--  </servlet-mapping>-->
-<!--&lt;!&ndash;  <servlet-mapping>&ndash;&gt;-->
-<!--&lt;!&ndash;    <servlet-name>default</servlet-name>&ndash;&gt;-->
-<!--&lt;!&ndash;    <url-pattern>*.html</url-pattern>&ndash;&gt;-->
-<!--&lt;!&ndash;  </servlet-mapping>&ndash;&gt;-->
+
 </web-app>

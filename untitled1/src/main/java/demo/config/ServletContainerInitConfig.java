@@ -7,6 +7,7 @@ import javax.servlet.Filter;
 
 public class ServletContainerInitConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
+//    获取Spring容器
     protected Class<?>[] getRootConfigClasses() {//获取spring容器配置
         return new Class[0];
     }
