@@ -4,6 +4,6 @@ import demo.pojo.Book;
 
 import java.util.List;
 
-public interface DemoService {
+public interface BookService {
     List<Book> selectAll();
 }
