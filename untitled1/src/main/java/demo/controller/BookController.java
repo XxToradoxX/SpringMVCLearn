@@ -31,7 +31,7 @@ public class BookController {
         System.out.println(book);
         Integer flag = bookService.addBook(book);
         if (flag != null) {
-            return new Result("200200", "添加成功", flag);
+            return new Result("200200", "添加成功", book.getBookId());
         } else {
             return new Result("400000", "添加失败", null);
         }

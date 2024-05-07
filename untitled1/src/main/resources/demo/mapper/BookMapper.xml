@@ -2,13 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="demo.mapper.BookMapper">
-    <insert id="addBook">
+    <insert id="addBook" keyProperty="bookId" useGeneratedKeys="true" parameterType="demo.pojo.Book">
         insert into book
         values (null, #{bookName}, #{bookCode})
     </insert>
 
     <select id="selectAll" resultType="demo.pojo.Book">
-        select * from book;
+        select *
+        from book;
     </select>
     <select id="selectById" resultType="demo.pojo.Book">
         select *
