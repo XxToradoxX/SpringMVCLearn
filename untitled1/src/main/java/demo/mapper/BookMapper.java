@@ -8,4 +8,8 @@ import java.util.List;
 @Mapper
 public interface BookMapper {
     List<Book> selectAll();
+
+    Book selectById(Integer id);
+
+    Integer addBook(Book book);
 }

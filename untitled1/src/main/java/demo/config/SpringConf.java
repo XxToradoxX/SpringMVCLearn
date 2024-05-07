@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = {"demo.service","demo.controller"})
+@ComponentScan(basePackages = {"demo.service", "demo.controller"})
 @Import(MybatisConf.class)
 public class SpringConf {
 
