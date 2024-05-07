@@ -4,6 +4,6 @@
 <mapper namespace="demo.mapper.DemoMapper">
 
     <select id="selectAll" resultType="demo.pojo.Book">
-
+        select * from book;
     </select>
 </mapper>
