@@ -14,7 +14,7 @@ public class BookController {
     @Autowired
     BookService bookService;
 
-    @PostMapping("")
+    @PostMapping()
     public Result GetBook() {
         List<Book> bookList = bookService.selectAll();
         return new Result("200200", "获得BOOKLIST", bookList);
