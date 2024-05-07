@@ -38,7 +38,7 @@ public class BookController {
     }
 
     @DeleteMapping("/deleteBooksByIds")
-    public Result deleteBooksByIds(@RequestParam("ids")Integer[] ids) {
+    public Result deleteBooksByIds(Integer[] ids) {
         Integer flag = bookService.deleteBooksByIds(ids);
         if (flag != null) {
             return new Result("200200", "Delete Complete", flag);
