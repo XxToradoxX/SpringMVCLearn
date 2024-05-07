@@ -36,4 +36,14 @@ public class BookController {
             return new Result("400000", "添加失败", null);
         }
     }
+
+    @DeleteMapping("/deleteBooksByIds")
+    public Result deleteBooksByIds(@RequestParam("ids")Integer[] ids) {
+        Integer flag = bookService.deleteBooksByIds(ids);
+        if (flag != null) {
+            return new Result("200200", "Delete Complete", flag);
+        } else {
+            return new Result("400000", "delete not found", null);
+        }
+    }
 }

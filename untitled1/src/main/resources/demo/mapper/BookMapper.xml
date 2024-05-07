@@ -6,6 +6,13 @@
         insert into book
         values (null, #{bookName}, #{bookCode})
     </insert>
+    <delete id="deleteBooksByIds">
+        delete from book
+        where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            id
+        </foreach>
+    </delete>
 
     <select id="selectAll" resultType="demo.pojo.Book">
         select *

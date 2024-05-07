@@ -10,4 +10,6 @@ public interface BookService {
     Book selectById(Integer id);
 
     Integer addBook(Book book);
+
+    Integer deleteBooksByIds(Integer[] ids);
 }
