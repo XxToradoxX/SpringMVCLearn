@@ -43,7 +43,7 @@ public class BookController {
         if (flag != null) {
             return new Result("200200", "Delete Complete", flag);
         } else {
-            return new Result("400000", "delete not found", null);
+            return new Result("400000", "delete not found", 0000);
         }
     }
 }
