@@ -38,12 +38,12 @@ public class BookController {
     }
 
     @DeleteMapping("/deleteBooksByIds")
-    public Result deleteBooksByIds(Integer[] ids) {
+    public Result deleteBooksByIds(@RequestParam("ids") Integer[] ids) {
         Integer flag = bookService.deleteBooksByIds(ids);
         if (flag != null) {
             return new Result("200200", "Delete Complete", flag);
         } else {
-            return new Result("400000", "delete not found", 0000);
+            return new Result("400000", "delete not found", null);
         }
     }
 }
