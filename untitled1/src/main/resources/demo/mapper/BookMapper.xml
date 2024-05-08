@@ -6,7 +6,7 @@
         insert into book
         values (null, #{bookName}, #{bookCode})
     </insert>
-    <delete id="deleteBooksByIds">
+    <delete id="deleteBooksByIds" parameterType="integer">
         delete from book
         where id in
         <foreach collection="list" item="id" separator="," open="(" close=")">
