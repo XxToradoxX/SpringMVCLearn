@@ -10,7 +10,7 @@
         delete from book
         where id in
         <foreach collection="ids" item="id" separator="," open="(" close=")">
-            id
+            #{id}
         </foreach>
     </delete>
 
