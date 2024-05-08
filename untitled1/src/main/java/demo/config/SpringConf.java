@@ -12,13 +12,6 @@ import javax.sql.DataSource;
 @Configuration
 @ComponentScan(basePackages = {"demo.service", "demo.controller"})
 @Import(MybatisConf.class)
-//@EnableTransactionManagement
 public class SpringConf {
-//    @Bean
-//    public DataSourceTransactionManager transactionManager(DataSource dataSource){
-//        DataSourceTransactionManager transactionManager = new DataSourceTransactionManager();
-//        transactionManager.setDataSource(dataSource);
-//        return transactionManager;
-//
-//    }
+
 }

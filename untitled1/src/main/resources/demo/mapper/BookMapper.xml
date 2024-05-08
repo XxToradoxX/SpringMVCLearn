@@ -8,7 +8,7 @@
     </insert>
     <delete id="deleteBooksByIds" parameterType="integer">
         delete from book
-        where id in
+        where bookId in
         <foreach collection="list" item="id" separator="," open="(" close=")">
             #{id}
         </foreach>
