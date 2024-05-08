@@ -11,5 +11,5 @@ public interface BookService {
 
     Integer addBook(Book book);
 
-    Integer deleteBooksByIds(Integer[] ids);
+    Integer deleteBooksByIds(List<Integer> ids);
 }
