@@ -6,19 +6,17 @@
         insert into book
         values (null, #{bookName}, #{bookCode})
     </insert>
+<!--    trim prefix为前置预留,suffix为后置预留,suffixOverrides为自动删除最后一个,-->
     <update id="updateBook">
         update book
-        <set>
+        <trim prefix="set" suffixOverrides="," suffix="where bookId = #{bookId}">
             <if test="bookName!=null">
-                bookName = #{bookName}
+                bookName = #{bookName},
             </if>
             <if test="bookCode!=null">
-                bookCode = #{bookCode}
+                bookCode = #{bookCode},
             </if>
-        </set>
-        <where>
-            bookId = #{bookId}
-        </where>
+        </trim>
     </update>
     <delete id="deleteBooksByIds" parameterType="integer">
         delete from book
