@@ -31,7 +31,7 @@ public class BookController {
     public Result AddBook(@RequestBody Book book) {
         System.out.println(book);
         Integer flag = bookService.addBook(book);
-        if (flag != null) {
+        if (flag != 0) {
             return new Result("200200", "添加成功", book.getBookId());
         } else {
             return new Result("400000", "添加失败", null);
@@ -42,27 +42,29 @@ public class BookController {
     public Result deleteBooksByIds(@RequestParam("ids") List<Integer> ids) {
         System.out.println(ids);
         Integer flag = bookService.deleteBooksByIds(ids);
-        if (flag != null) {
+        if (flag != 0) {
             return new Result("200200", "Delete Complete", flag);
         } else {
             return new Result("400000", "delete not found", null);
         }
     }
+
     @DeleteMapping("{id}")
-    public Result deleteBookById(@PathVariable("id")Integer id){
+    public Result deleteBookById(@PathVariable("id") Integer id) {
         Integer flag = bookService.deleteBookByid(id);
-        if(flag!=null){
+        if (flag != 0) {
             return new Result("200200", "Delete Complete", flag);
-        }else{
+        } else {
             return new Result("400000", "delete not found", null);
         }
     }
+
     @PostMapping("/updateBook")
-    public Result updateBook(@RequestBody Book book){
+    public Result updateBook(@RequestBody Book book) {
         Integer flag = bookService.updateBook(book);
-        if(flag!=null){
+        if (flag != 0) {
             return new Result("200200", "update Complete", flag);
-        }else{
+        } else {
             return new Result("400000", "update not complete", null);
         }
     }
