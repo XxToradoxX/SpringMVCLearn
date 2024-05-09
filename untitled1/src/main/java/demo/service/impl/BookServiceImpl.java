@@ -32,4 +32,14 @@ public class BookServiceImpl implements BookService {
     public Integer deleteBooksByIds(List<Integer> ids) {
         return bookMapper.deleteBooksByIds(ids);
     }
+
+    @Override
+    public Integer deleteBookByid(Integer id) {
+        return bookMapper.deleteBookById(id);
+    }
+
+    @Override
+    public Integer updateBook(Book book) {
+        return bookMapper.updateBook(book);
+    }
 }

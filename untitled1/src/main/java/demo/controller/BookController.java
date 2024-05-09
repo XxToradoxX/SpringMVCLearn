@@ -3,6 +3,7 @@ package demo.controller;
 import demo.pojo.Book;
 import demo.pojo.Result;
 import demo.service.BookService;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,6 +46,24 @@ public class BookController {
             return new Result("200200", "Delete Complete", flag);
         } else {
             return new Result("400000", "delete not found", null);
+        }
+    }
+    @DeleteMapping("{id}")
+    public Result deleteBookById(@PathVariable("id")Integer id){
+        Integer flag = bookService.deleteBookByid(id);
+        if(flag!=null){
+            return new Result("200200", "Delete Complete", flag);
+        }else{
+            return new Result("400000", "delete not found", null);
+        }
+    }
+    @PostMapping("/updateBook")
+    public Result updateBook(@RequestBody Book book){
+        Integer flag = bookService.updateBook(book);
+        if(flag!=null){
+            return new Result("200200", "update Complete", flag);
+        }else{
+            return new Result("400000", "update not complete", null);
         }
     }
 }

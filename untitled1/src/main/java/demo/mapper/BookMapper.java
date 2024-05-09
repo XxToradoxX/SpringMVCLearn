@@ -14,4 +14,8 @@ public interface BookMapper {
     Integer addBook(Book book);
 
     Integer deleteBooksByIds(List<Integer> ids);
+
+    Integer deleteBookById(Integer id);
+
+    Integer updateBook(Book book);
 }

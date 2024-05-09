@@ -6,12 +6,31 @@
         insert into book
         values (null, #{bookName}, #{bookCode})
     </insert>
+    <update id="updateBook">
+        update book
+        <set>
+            <if test="bookName!=null">
+                bookName = #{bookName}
+            </if>
+            <if test="bookCode!=null">
+                bookCode = #{bookCode}
+            </if>
+        </set>
+        <where>
+            bookId = #{bookId}
+        </where>
+    </update>
     <delete id="deleteBooksByIds" parameterType="integer">
         delete from book
         where bookId in
         <foreach collection="list" item="id" separator="," open="(" close=")">
             #{id}
         </foreach>
+    </delete>
+    <delete id="deleteBookById">
+        delete
+        from book
+        where bookId = #{id}
     </delete>
 
     <select id="selectAll" resultType="demo.pojo.Book">
