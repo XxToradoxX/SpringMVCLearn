@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan(basePackages = {"demo.service", "demo.controller"})
-@Import({MybatisConf.class,DataSourceConf.class})
+@Import({MybatisConf.class,DataSourceConf.class, SpringmvcConfig.class})
 //@Import可以把Class对象转化为bean注册到当前对象里
 public class SpringConf {
 
