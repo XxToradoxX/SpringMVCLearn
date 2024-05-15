@@ -2,7 +2,8 @@
 SQLyog Ultimate v12.09 (64 bit)
 MySQL - 5.7.41-log : Database - abc
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -29,7 +30,7 @@ CREATE TABLE `book` (
 
 /*Data for the table `book` */
 
-insert  into `book`(`BookId`,`BookName`,`BookCode`) values (1,'逸一时误一世','1919810'),(4,'张三','11111');
+insert  into `book`(`BookId`,`BookName`,`BookCode`) values (1,'逸一时误一世','1919810'),(4,'吊毛dcc','11111');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
