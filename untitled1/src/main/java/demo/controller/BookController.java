@@ -24,7 +24,7 @@ public class BookController {
     @PostMapping("{id}")
     public Result getBookWithId(@PathVariable("id") Integer id) {
         Book bookObject = bookService.selectById(id);
-        return new Result("200200", "获得BOOK,id = " + id, bookObject);
+        return new Result("200200", "获得BOOK,id is " + id, bookObject);
     }
 
     @PostMapping("/addBook")
